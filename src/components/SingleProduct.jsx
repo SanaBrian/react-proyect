@@ -1,8 +1,7 @@
 import { Card, CardContent, CardMedia, Typography } from '@mui/material'
 import { Box } from '@mui/material'
-import { useEffect, useState } from 'react'
 import { PropTypes } from 'prop-types'
-import { useParams } from  "react-router"
+
 
 
 SingleProduct.propTypes = {
@@ -11,7 +10,6 @@ SingleProduct.propTypes = {
 
 export default function SingleProduct({singleProduct}) {
 
-    let { id } = useParams();
    
   return (
     <>

@@ -2,8 +2,8 @@ import { useRoutes } from "react-router-dom";
 import AllProducts from "./AllProducts"
 import AllUserCarts from "./AllUserCarts";
 import SingleProduct from "./SingleProduct"
-import ResumeCarts from "./ResumeCarts";
 import { useState } from "react";
+
 
 
 export default function Routes() {
@@ -14,7 +14,7 @@ export default function Routes() {
     estableceDatos(product);
       
   }
-  
+ 
 
   let element = useRoutes([
     {
@@ -25,7 +25,7 @@ export default function Routes() {
       element: <AllProducts hijoAPadre={hijoAPadre} /> 
     },
     { path: "users", 
-      element: <AllUserCarts />
+      element: <AllUserCarts hijoAPadre={hijoAPadre} />
     },
     {
       path:"product",

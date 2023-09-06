@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState, useEffect } from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
 import { Box } from '@mui/material';
@@ -10,8 +9,8 @@ AllProducts.propTypes = {
 }
 
 export default function AllProducts({hijoAPadre}) {
-    
-    const navigate = useNavigate();
+  
+  const navigate = useNavigate();
     
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

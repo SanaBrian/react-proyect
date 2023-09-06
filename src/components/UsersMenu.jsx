@@ -8,10 +8,13 @@ import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 import { useState, useRef, useEffect } from 'react';
 import ResumeCarts from './ResumeCarts';
+import { PropTypes } from 'prop-types';
 
+UserMenu.propTypes = {
+    hijoAPadre: PropTypes.func
+}
 
-
-export default function UserMenu() {
+export default function UserMenu({hijoAPadre}) {
 
     const [open, setOpen] = useState(false);
     const anchorRef = useRef(null);
@@ -26,17 +29,15 @@ export default function UserMenu() {
 
     const tableDisplay = () => {
         if(userId!=null){
-            console.log(typeof(userId))
-            return <ResumeCarts userId = {userId} />
+            console.log(userId)
+            return <ResumeCarts userId = {userId} hijoAPadre = {hijoAPadre} />
         }
-        return <h3>{console.log(userId)}</h3>
+        return 
     }
     
     const handleMenuItemClick = (username, userId) => {
-        //setSelectedIndex(index);
         setUsername(username);
         setUserId(userId);
-        
         setOpen(false);
     };
 

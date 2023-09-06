@@ -8,24 +8,20 @@ import { ListItemButton } from "@mui/material";
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography'
 import UsersMenu from "./UsersMenu"
+import { PropTypes } from 'prop-types';
+
+
+AllUserCarts.propTypes = {
+  hijoAPadre: PropTypes.func
+}
 
 
 
-
-export default function AllUserCarts() {
-
-  //const [users, setUsers] = useState([])
-
-  //useEffect(() => {fetch("https://fakestoreapi.com/users")
-  //.then((response) => response.json())
-  //.then((json) => setUsers(json))
-  //},[])
-
-
+export default function AllUserCarts({hijoAPadre}) {
 
   return (
     <>
-      <UsersMenu />
+      <UsersMenu hijoAPadre = {hijoAPadre}/>
       {/*<nav aria-label="main mailbox folders">
         <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'lightblue' }}>
         {  
